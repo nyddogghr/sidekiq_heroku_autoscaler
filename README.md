@@ -125,3 +125,6 @@ autoscaler](https://github.com/JustinLove/autoscaler).
 
 I wanted to get something much simpler only to have a linear scaling based on
 the number of jobs that are to be processed.
+
+What was also missing to me was a scaler that would take into account all
+Sidekiq queues at once.
