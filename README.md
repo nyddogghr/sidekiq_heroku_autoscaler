@@ -88,6 +88,12 @@ end
 
 ## How it works
 
+### Thread
+
+Every time a job is inserted by a client (meaning the `call` method is used),
+the scaler will perform scaling in a thread. This is to prevent any long call
+to heroku, or a redis timeout...  from inserting and starting immediately a job.
+
 ### Maintenance mode
 
 The autoscaler will not scale if the application is in maintenance mode. This
